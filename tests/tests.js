@@ -13,6 +13,7 @@ describe("getPrimes ", function () {
             expect(getPrimes(0)).toEqual([]);
         });
         
+        
         it("should return '[2]' for 2", function () {
             expect(getPrimes(2)).toEqual([2]);
         });
@@ -26,9 +27,19 @@ describe("getPrimes ", function () {
             expect(getPrimes(0.5)).toEqual([]);
             });
 
+        
         it("should return '[]' for typeof(true)", function() {
             expect(getPrimes(true)).toEqual([]);
             });
+        
+        
+        it("should return '[]' for typeof([])", function() {
+            expect(getPrimes([])).toEqual([]);
+            });
+        
+        
+        it("should return '[]' for typeof([1,2,3])", function() expect(getPrimes([1,2,3])).toEqual([]);
+        });
 
         
 
