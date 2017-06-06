@@ -38,12 +38,19 @@ describe("getPrimes ", function () {
             });
         
         
-        it("should return '[]' for typeof([1,2,3])", function() expect(getPrimes([1,2,3])).toEqual([]);
-        });
-
+        it("should return '[]' for typeof([])", function() {
+            expect(getPrimes([1,2,3])).toEqual([]);
+            });
         
 
-                
+       it("should return '[]' for typeof({})", function() {
+            expect(getPrimes({})).toEqual([]);
+        });
+        
+        
+        it("should return '[]' for typeof({'jug':4,'kettle':5})", function() {
+            expect(getPrimes({})).toEqual([]);
+        });          
     });
  });
 
